@@ -12,9 +12,9 @@ import java.awt.event.KeyListener;
 
 import static java.awt.Color.*;
 
+// TODO: create a separate BattleLogic class and move 3 battle-related methods there!!
 public class Board extends JComponent implements KeyListener {
-  // game.Board class is messy and full of duplicated code. Next task is to create separate classes (e.g.
-  // BattleLogic etc.) & clean up the code.
+
   protected int level = 1;
   protected int tileSize = 72;
   protected int mapWidth = 10;
