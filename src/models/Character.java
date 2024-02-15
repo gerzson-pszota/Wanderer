@@ -31,9 +31,10 @@ public abstract class Character {
     currentHealthPoint -= (strikeValue - defendPoint);
   }
 
-  public void levelUp(){
+  public void levelUp() {
     level++;
   }
+
   public void setPosition(int x, int y) {
     this.positionX = x;
     this.positionY = y;
