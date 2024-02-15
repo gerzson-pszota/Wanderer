@@ -206,7 +206,7 @@ public class Board extends JComponent implements KeyListener {
           } else {
             enemyStrikesHero(monster1);
             if (myHero.getCurrentHealthPoint() <= 0) {
-              System.exit(0); // need to find a more elegant way for Game Over
+              System.exit(0);
             }
           }
         }
@@ -227,7 +227,7 @@ public class Board extends JComponent implements KeyListener {
           } else {
             enemyStrikesHero(monster2);
             if (myHero.getCurrentHealthPoint() <= 0) {
-              System.exit(0); // need to find a more elegant way for Game Over
+              System.exit(0);
             }
           }
         }
@@ -245,7 +245,7 @@ public class Board extends JComponent implements KeyListener {
           } else {
             enemyStrikesHero(monster3);
             if (myHero.getCurrentHealthPoint() <= 0) {
-              System.exit(0); // need to find a more elegant way for Game Over
+              System.exit(0);
             }
           }
         }
@@ -263,7 +263,7 @@ public class Board extends JComponent implements KeyListener {
           } else {
             enemyStrikesHero(boss);
             if (myHero.getCurrentHealthPoint() <= 0) {
-              System.exit(0); // need to find a more elegant way for Game Over
+              System.exit(0);
             }
           }
         }
@@ -300,7 +300,7 @@ public class Board extends JComponent implements KeyListener {
     int textX = frameX + 53;
     int textY = frameY + 20;
     graphics.drawString(
-        myHero.getTypeOfCharacter()
+        "Hero"
             + " (Level "
             + myHero.getLevel()
             + ") HP: "
@@ -352,11 +352,7 @@ public class Board extends JComponent implements KeyListener {
     bossX = 9 * tileSize;
     bossY = 3 * tileSize;
 
-    monster1.setAlive(true);
-    monster2.setAlive(true);
-    monster3.setAlive(true);
-    boss.setAlive(true);
-    myHero.setGotKey(false);
+    setMonstersAndHeroUp();
 
     monster1Image = new PositionedImage("img/Golem.png", monster1X, monster1Y);
     monster2Image = new PositionedImage("img/Golem.png", monster2X, monster2Y);
@@ -398,11 +394,7 @@ public class Board extends JComponent implements KeyListener {
     bossX = 7 * tileSize;
     bossY = 4 * tileSize;
 
-    monster1.setAlive(true);
-    monster2.setAlive(true);
-    monster3.setAlive(true);
-    boss.setAlive(true);
-    myHero.setGotKey(false);
+    setMonstersAndHeroUp();
 
     monster1Image = new PositionedImage("img/fireGolem.png", monster1X, monster1Y);
     monster2Image = new PositionedImage("img/fireGolem.png", monster2X, monster2Y);
@@ -429,5 +421,13 @@ public class Board extends JComponent implements KeyListener {
 
     nextAreaStats();
     repaint();
+  }
+
+  private void setMonstersAndHeroUp() {
+    monster1.setAlive(true);
+    monster2.setAlive(true);
+    monster3.setAlive(true);
+    boss.setAlive(true);
+    myHero.setGotKey(false);
   }
 }
