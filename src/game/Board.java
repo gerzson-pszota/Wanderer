@@ -1,3 +1,5 @@
+package game;
+
 import models.Boss;
 import models.Character;
 import models.Hero;
@@ -11,7 +13,7 @@ import java.awt.event.KeyListener;
 import static java.awt.Color.*;
 
 public class Board extends JComponent implements KeyListener {
-  // Board class is messy and full of duplicated code. Next task is to create separate classes (e.g.
+  // game.Board class is messy and full of duplicated code. Next task is to create separate classes (e.g.
   // BattleLogic etc.) & clean up the code.
   protected int level = 1;
   protected int tileSize = 72;
