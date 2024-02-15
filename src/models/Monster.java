@@ -1,3 +1,5 @@
+package models;
+
 public class Monster extends Character {
     public Monster() {
         level = 1;
@@ -5,6 +7,6 @@ public class Monster extends Character {
         currentHealthPoint = maxHealthPoint;
         defendPoint = level / 2 * diceRoll();
         strikePoint = level * diceRoll();
-        typeOfCharacter = "Monster";
+        typeOfCharacter = "models.Monster";
     }
 }
